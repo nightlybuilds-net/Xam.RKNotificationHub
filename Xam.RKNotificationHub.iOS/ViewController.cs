@@ -15,6 +15,13 @@ namespace Xam.RKNotificationHub.iOS
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            var badge = new RKNotificationHub(this.TestView);
+            this.IncrementButton.TouchDown += (sender, e) => 
+            {
+                badge.Increment();
+                badge.Pop();
+            };
         }
 
         public override void DidReceiveMemoryWarning()
