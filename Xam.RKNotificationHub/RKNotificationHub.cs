@@ -5,5 +5,6 @@ namespace Xam.RKNotificationHub
 {
     public unsafe partial class RKNotificationHub : NSObject { }
 
-   
+    class FakeAotRKNotificationHub : RKNotificationHub
+    {}
 }
